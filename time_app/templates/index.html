@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cattime</h1>
+    <h3>Welcome back {{ request.session.name }}</h3>
+    <pre>{{ time }}</pre>
+    <ul>
+    {% for number in numbers %}
+        {% if number|divisibleby:3 %}
+            <li style="color:mediumseagreen;">{{ number }}</li>
+        {% else %}
+            <li>{{ number }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+    <a href="/home">Home</a>
+</body>
+</html>
